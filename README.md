@@ -12,17 +12,17 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 
 **GitHub Pages:** https://nagendrayakkaladevara.github.io/Tokens-Presentation-/
 
-### One-time setup (repo owner)
+### One-time setup (repo owner — ~30 seconds)
 
-GitHub Pages must be enabled once in repository settings:
+GitHub Pages is not enabled yet. Turn it on once:
 
-1. Open [Repository Settings → Pages](https://github.com/nagendrayakkaladevara/Tokens-Presentation-/settings/pages)
-2. Under **Build and deployment → Source**, choose **GitHub Actions**
-3. Go to [Actions](https://github.com/nagendrayakkaladevara/Tokens-Presentation-/actions) and re-run the latest **Deploy to GitHub Pages** workflow
+1. Open **[Repository Settings → Pages](https://github.com/nagendrayakkaladevara/Tokens-Presentation-/settings/pages)**
+2. Under **Build and deployment → Source**, choose **Deploy from a branch**
+3. Set **Branch** to `gh-pages` and folder to **`/ (root)`**, then click **Save**
 
-The site will be live at the URL above within 1–2 minutes.
+Your presentation will be live at the URL above within 1–2 minutes.
 
-**Alternative (no Actions):** set Source to **Deploy from a branch**, branch **main**, folder **/ (root)**.
+**Alternative (GitHub Actions):** set Source to **GitHub Actions**, then re-run the [Deploy to GitHub Pages](https://github.com/nagendrayakkaladevara/Tokens-Presentation-/actions/workflows/deploy-pages.yml) workflow.
 
 ## Run locally
 
