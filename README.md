@@ -10,6 +10,7 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | 2 | What is a Token? — LLM explanation & example | Done |
 | 3 | Tokens Are NOT Always Words | Done |
 | 4 | Code Tokenization Example | Done |
+| 5 | Important Insight — Tokenization algorithms | Done |
 
 ## Live site
 

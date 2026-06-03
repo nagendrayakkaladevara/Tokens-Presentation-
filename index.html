@@ -126,10 +126,57 @@
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
+
+    <section class="slide slide--content" data-slide="5">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Important Insight</h1>
+
+        <div class="insight-block">
+          <p class="slide__lead">Tokenizer is <strong>NOT</strong> grammar-based.</p>
+          <p class="slide__note">It is pattern/statistics-based.</p>
+        </div>
+
+        <div class="learn-block">
+          <p class="example__label">It learns:</p>
+          <ul class="learn-list">
+            <li>common words</li>
+            <li>common subwords</li>
+            <li>frequent patterns</li>
+            <li>code syntax</li>
+            <li>punctuation</li>
+          </ul>
+        </div>
+
+        <div class="algo-block">
+          <h2 class="algo-block__title">Common Tokenization Algorithms</h2>
+          <p class="slide__note">Modern LLMs use algorithms like:</p>
+
+          <table class="algo-table">
+            <thead>
+              <tr>
+                <th>Algorithm</th>
+                <th>Used By</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>BPE (Byte Pair Encoding)</td>
+                <td>GPT</td>
+              </tr>
+              <tr>
+                <td>SentencePiece</td>
+                <td>Gemini, T5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
   </div>
 
   <footer class="controls">
-    <span class="controls__counter"><span id="current">1</span> / <span id="total">4</span></span>
+    <span class="controls__counter"><span id="current">1</span> / <span id="total">5</span></span>
   </footer>
 
   <script src="js/app.js"></script>
