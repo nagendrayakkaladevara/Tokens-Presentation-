@@ -6,7 +6,7 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 
 | Screen | Title | Status |
 |--------|-------|--------|
-| 1 | What is Tokens? | Done |
+| 1 | What is a Token? (Before 5 Years) | Done |
 
 ## Live site
 
