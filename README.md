@@ -9,6 +9,7 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | 1 | What is a Token? (Before 5 Years) | Done |
 | 2 | What is a Token? — LLM explanation & example | Done |
 | 3 | Tokens Are NOT Always Words | Done |
+| 4 | Code Tokenization Example | Done |
 
 ## Live site
 
