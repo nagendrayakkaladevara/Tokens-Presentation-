@@ -172,11 +172,11 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="6">
-      <div class="slide__inner slide__inner--wide slide__inner--grid">
+    <section class="slide slide--content slide--dense" data-slide="6">
+      <div class="slide__inner slide__inner--grid slide__inner--slide6">
         <h1 class="slide__title slide__title--sm slide__span-full">Why Not Character-by-Character?</h1>
 
-        <div class="slide-grid">
+        <div class="slide-grid slide-grid--3col">
           <div class="slide-grid__col">
             <div class="example example--compact">
               <p class="example__label">Character-level tokens:</p>
@@ -193,7 +193,7 @@
 
             <div class="example example--compact">
               <p class="example__label">would create:</p>
-              <div class="token-row">
+              <div class="token-row token-row--stack">
                 <span class="token">huge sequences</span>
                 <span class="token">slow processing</span>
                 <span class="token">poor semantic learning</span>
@@ -226,51 +226,51 @@
               <p class="example__sentence">Because spaces carry information.</p>
             </div>
           </div>
-        </div>
 
-        <div class="slide-grid slide-grid--bottom">
-          <div class="example example--compact">
-            <p class="example__label">Example — <span>New York</span></p>
-            <div class="compare-row">
-              <div class="compare-row__group">
-                <p class="compare-row__label">may learn</p>
-                <div class="token-row">
-                  <span class="token">New</span>
-                  <span class="token">York</span>
+          <div class="slide-grid__col">
+            <div class="example example--compact">
+              <p class="example__label">Example — <span>New York</span></p>
+              <div class="compare-row compare-row--stack">
+                <div class="compare-row__group">
+                  <p class="compare-row__label">may learn</p>
+                  <div class="token-row">
+                    <span class="token">New</span>
+                    <span class="token">York</span>
+                  </div>
+                </div>
+                <span class="compare-row__vs">vs</span>
+                <div class="compare-row__group">
+                  <p class="compare-row__label">instead of</p>
+                  <div class="token-row">
+                    <span class="token">New</span>
+                    <span class="token">Y</span>
+                    <span class="token">o</span>
+                    <span class="token">r</span>
+                    <span class="token">k</span>
+                  </div>
                 </div>
               </div>
-              <span class="compare-row__vs">vs</span>
-              <div class="compare-row__group">
-                <p class="compare-row__label">instead of</p>
-                <div class="token-row">
-                  <span class="token">New</span>
-                  <span class="token">Y</span>
-                  <span class="token">o</span>
-                  <span class="token">r</span>
-                  <span class="token">k</span>
-                </div>
+            </div>
+
+            <div class="example example--compact">
+              <p class="example__label">Another Example</p>
+              <p class="example__sentence">Different statistically:</p>
+              <div class="token-row">
+                <span class="token">apple</span>
+                <span class="token"> Apple</span>
+              </div>
+              <p class="example__sentence">One may appear:</p>
+              <div class="token-row token-row--stack">
+                <span class="token">mid-sentence</span>
+                <span class="token">sentence start</span>
+                <span class="token">title case</span>
               </div>
             </div>
-          </div>
 
-          <div class="example example--compact">
-            <p class="example__label">Another Example</p>
-            <p class="example__sentence">Different statistically:</p>
-            <div class="token-row">
-              <span class="token">apple</span>
-              <span class="token"> Apple</span>
-            </div>
-            <p class="example__sentence">One may appear:</p>
-            <div class="token-row">
-              <span class="token">mid-sentence</span>
-              <span class="token">sentence start</span>
-              <span class="token">title case</span>
+            <div class="callout callout--compact">
+              <p class="callout__emphasis">Spacing + casing patterns matter in language.</p>
             </div>
           </div>
-        </div>
-
-        <div class="callout callout--compact slide__span-full">
-          <p class="callout__emphasis">Spacing + casing patterns matter in language.</p>
         </div>
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
