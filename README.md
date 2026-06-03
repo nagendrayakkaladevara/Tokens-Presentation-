@@ -12,6 +12,8 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | 4 | Code Tokenization Example | Done |
 | 5 | Important Insight — Tokenization algorithms | Done |
 | 6 | Why Not Character-by-Character? / Why Spaces Become Tokens | Done |
+| 7 | Token IDs & Vocabulary | Done |
+| 8 | Why Token IDs Are Needed | Done |
 
 ## Live site
 
