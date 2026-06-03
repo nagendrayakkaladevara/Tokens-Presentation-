@@ -8,6 +8,10 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 |--------|-------|--------|
 | 1 | What is Tokens? | Done |
 
+## Live site
+
+**GitHub Pages:** https://nagendrayakkaladevara.github.io/Tokens-Presentation-/
+
 ## Run locally
 
 Open `index.html` in your browser, or serve the folder:
