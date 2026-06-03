@@ -263,10 +263,96 @@
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
+
+    <section class="slide slide--content" data-slide="7">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Token IDs</h1>
+
+        <p class="slide__lead">Tokens are still text.</p>
+        <p class="slide__note">AI models cannot compute directly on strings.</p>
+        <p class="slide__lead">So every token maps to an integer value called a <strong>Token ID</strong>.</p>
+
+        <div class="example">
+          <p class="example__label">Vocabulary</p>
+          <p class="example__sentence">The model maintains a giant lookup table called a <strong>Vocabulary</strong>.</p>
+
+          <table class="algo-table">
+            <thead>
+              <tr>
+                <th>Token</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Angular</td>
+                <td>8821</td>
+              </tr>
+              <tr>
+                <td> is</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td> awesome</td>
+                <td>5012</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Example</p>
+          <p class="example__sentence">Input sentence: <span>Angular is awesome</span></p>
+
+          <p class="example__label">After tokenization:</p>
+          <p class="example__code"><span>["Angular", " is", " awesome"]</span></p>
+
+          <p class="example__label">After converting to Token IDs:</p>
+          <p class="example__code"><span>[8821, 120, 5012]</span></p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="8">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Why Token IDs Are Needed</h1>
+
+        <div class="example">
+          <p class="example__label">Neural networks can only process:</p>
+          <div class="token-row">
+            <span class="token">numbers</span>
+            <span class="token">vectors</span>
+            <span class="token">matrices</span>
+          </div>
+        </div>
+
+        <p class="slide__note">They cannot directly understand strings like:</p>
+        <p class="example__code example__code--solo"><span>"Angular"</span></p>
+
+        <p class="slide__lead">So text must first become integers before mathematical computation begins.</p>
+
+        <div class="example">
+          <p class="example__label">Real Example</p>
+          <p class="example__sentence">Sentence: <span>I love Angular</span></p>
+
+          <p class="example__label">Possible tokens:</p>
+          <p class="example__code"><span>["I", " love", " Angular"]</span></p>
+
+          <p class="example__label">Possible Token IDs:</p>
+          <p class="example__code"><span>[40, 2045, 8821]</span></p>
+        </div>
+
+        <div class="callout">
+          <p class="callout__emphasis">These IDs are then passed into the embedding layer.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
   </div>
 
   <footer class="controls">
-    <span class="controls__counter"><span id="current">1</span> / <span id="total">6</span></span>
+    <span class="controls__counter"><span id="current">1</span> / <span id="total">8</span></span>
   </footer>
 
   <script src="js/app.js"></script>

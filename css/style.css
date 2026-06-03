@@ -220,6 +220,16 @@ body {
   border-radius: 8px;
 }
 
+.example__code--solo {
+  width: 100%;
+  text-align: center;
+}
+
+.example__sentence strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .token-row {
   display: flex;
   flex-wrap: wrap;
