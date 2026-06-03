@@ -83,18 +83,44 @@
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Code Tokenization Example</h1>
 
-        <div class="example">
-          <p class="example__sentence example__code"><span>const user = fetchData();</span></p>
+        <div class="tokenization-visual">
+          <div class="code-card">
+            <div class="code-card__header">
+              <span class="code-card__lang">
+                <svg class="code-card__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M8.5 18.5 2 12l6.5-6.5 1.4 1.4L4.8 12l5.1 5.1-1.4 1.4Zm7 0 6.5-6.5-6.5-6.5-1.4 1.4L19.2 12l-5.1 5.1 1.4 1.4Z"/>
+                </svg>
+                TypeScript
+              </span>
+              <span class="code-card__copy" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1Zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2Zm0 16H8V7h11v14Z"/>
+                </svg>
+              </span>
+            </div>
+            <pre class="code-card__body"><code><span class="code-kw">const</span> <span class="code-id">user</span> <span class="code-op">=</span> <span class="code-fn">fetchData</span><span class="code-op">();</span></code></pre>
+          </div>
 
-          <p class="example__label">Possible tokens:</p>
-          <div class="token-row">
-            <span class="token">const</span>
-            <span class="token">user</span>
-            <span class="token">=</span>
-            <span class="token">fetch</span>
-            <span class="token">Data</span>
-            <span class="token">()</span>
-            <span class="token">;</span>
+          <p class="tokenization-visual__label">Possible tokens:</p>
+
+          <div class="token-list-card">
+            <div class="token-list-card__header">
+              <span>Token</span>
+              <span class="code-card__copy" aria-hidden="true">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1Zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2Zm0 16H8V7h11v14Z"/>
+                </svg>
+              </span>
+            </div>
+            <ul class="token-list">
+              <li><span>const</span></li>
+              <li><span>user</span></li>
+              <li><span>=</span></li>
+              <li><span>fetch</span></li>
+              <li><span>Data</span></li>
+              <li><span>()</span></li>
+              <li><span>;</span></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -329,3 +329,113 @@ body {
     bottom: 0.5rem;
   }
 }
+
+.tokenization-visual {
+  width: min(360px, 100%);
+  margin: 0 auto;
+  text-align: left;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.code-card,
+.token-list-card {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.code-card__header,
+.token-list-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.85rem;
+  background: #242424;
+  color: #e5e5e5;
+  font-size: clamp(0.75rem, 1.4vh, 0.85rem);
+  font-weight: 500;
+}
+
+.code-card__lang {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.code-card__icon,
+.code-card__copy svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.code-card__copy {
+  display: inline-flex;
+  color: #a3a3a3;
+}
+
+.code-card__body {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: clamp(0.8rem, 1.5vh, 0.95rem);
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+.code-kw {
+  color: #f472b6;
+}
+
+.code-id,
+.code-fn {
+  color: #c4b5fd;
+}
+
+.code-op {
+  color: #f4f6fb;
+}
+
+.tokenization-visual__label {
+  margin: 0.75rem 0 0.5rem;
+  font-size: clamp(0.85rem, 1.5vh, 0.95rem);
+  color: var(--text);
+}
+
+.token-list {
+  list-style: none;
+}
+
+.token-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(0.35rem, 0.8vh, 0.5rem) 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.token-list li span {
+  display: inline-block;
+  min-width: 4.5rem;
+  padding: 0.3rem 0.75rem;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: clamp(0.8rem, 1.5vh, 0.9rem);
+  text-align: center;
+  color: #f4f6fb;
+  background: #2a2a2a;
+  border-radius: 8px;
+}
+
+@media (max-height: 768px) {
+  .tokenization-visual__label {
+    margin: 0.5rem 0 0.35rem;
+  }
+
+  .code-card__body {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .token-list li {
+    padding: 0.3rem 0.65rem;
+  }
+}
