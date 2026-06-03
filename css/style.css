@@ -195,6 +195,13 @@ body {
   margin-top: clamp(0.5rem, 1vh, 0.75rem);
 }
 
+.example__label span {
+  color: var(--text);
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
 .example__sentence {
   font-size: clamp(0.85rem, 1.6vh, 0.95rem);
   color: var(--muted);
@@ -517,4 +524,101 @@ body {
 .link-list__item:hover {
   background: rgba(56, 189, 248, 0.15);
   border-color: rgba(56, 189, 248, 0.5);
+}
+
+.slide__inner--grid {
+  width: min(1040px, calc(100% - 1.5rem));
+  gap: clamp(0.4rem, 0.9vh, 0.65rem);
+}
+
+.slide__span-full {
+  width: 100%;
+}
+
+.slide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.5rem, 1vh, 0.75rem);
+  width: 100%;
+  align-items: start;
+}
+
+.slide-grid--bottom {
+  grid-template-columns: 1fr 1fr;
+}
+
+.slide-grid__col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.35rem, 0.7vh, 0.5rem);
+  min-width: 0;
+}
+
+.example--compact {
+  padding: clamp(0.5rem, 1vh, 0.65rem) clamp(0.65rem, 1.2vw, 0.85rem);
+}
+
+.example--compact .example__label {
+  margin-bottom: 0.25rem;
+}
+
+.example--compact .example__label + .example__label,
+.example--compact .example__sentence {
+  margin-top: 0.25rem;
+}
+
+.callout--compact {
+  padding: clamp(0.5rem, 1vh, 0.65rem) clamp(0.65rem, 1.2vw, 0.85rem);
+}
+
+.compare-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.compare-row__group {
+  flex: 1;
+  min-width: 120px;
+}
+
+.compare-row__label {
+  font-size: clamp(0.6rem, 1.1vh, 0.7rem);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.compare-row__vs {
+  font-size: clamp(0.75rem, 1.3vh, 0.85rem);
+  font-weight: 600;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 720px) {
+  .slide-grid,
+  .slide-grid--bottom {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 768px) {
+  .slide__inner--grid {
+    gap: 0.35rem;
+  }
+
+  .slide-grid__col {
+    gap: 0.3rem;
+  }
+
+  .example--compact,
+  .callout--compact {
+    padding: 0.45rem 0.6rem;
+  }
 }
