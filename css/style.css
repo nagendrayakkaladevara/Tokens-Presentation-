@@ -64,6 +64,152 @@ body {
   animation: fadeUp 0.8s ease both;
 }
 
+.slide__inner--wide {
+  max-width: 960px;
+  padding: 2rem 2.5rem;
+  text-align: left;
+}
+
+.slide--content {
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.slide--content .slide__inner--wide {
+  margin: auto;
+}
+
+.slide__title--sm {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.slide__lead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  animation: fadeUp 0.8s 0.1s ease both;
+}
+
+.slide__note {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
+.slide__note strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.75rem;
+  animation: fadeUp 0.8s 0.2s ease both;
+}
+
+.flow__step {
+  padding: 0.55rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: var(--surface);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.flow__step--accent {
+  border-color: rgba(56, 189, 248, 0.45);
+  color: var(--accent);
+}
+
+.flow__arrow {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.example {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  animation: fadeUp 0.8s 0.25s ease both;
+}
+
+.example__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.example__sentence {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.example__sentence span {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.token-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.token {
+  display: inline-block;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 6px;
+  color: var(--text);
+}
+
+.callout {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(56, 189, 248, 0.06);
+  border-radius: 0 8px 8px 0;
+  animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.callout__title {
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.callout p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.callout__emphasis {
+  margin-top: 0.35rem;
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
 .slide__title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
