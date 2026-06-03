@@ -15,6 +15,8 @@
   --accent-glow: rgba(56, 189, 248, 0.35);
   --font-display: "Playfair Display", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
+  --slide-width: min(820px, calc(100vw - 3rem));
+  --slide-padding-bottom: 4rem;
 }
 
 html,
@@ -41,6 +43,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem 1.5rem var(--slide-padding-bottom);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -55,49 +58,63 @@ body {
   visibility: visible;
 }
 
+.slide--content {
+  overflow-y: auto;
+}
+
 .slide__inner {
   position: relative;
   z-index: 1;
-  max-width: 900px;
-  padding: 3rem;
+  width: var(--slide-width);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   text-align: center;
   animation: fadeUp 0.8s ease both;
 }
 
 .slide__inner--wide {
-  max-width: 960px;
-  padding: 2rem 2.5rem;
-  text-align: left;
+  gap: 1.25rem;
 }
 
-.slide--content {
-  align-items: flex-start;
-  overflow-y: auto;
-}
-
-.slide--content .slide__inner--wide {
-  margin: auto;
+.slide__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  width: 100%;
 }
 
 .slide__title--sm {
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  margin-bottom: 1.25rem;
-  text-align: center;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  margin-bottom: 0;
+}
+
+.slide__subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--muted);
+  animation: fadeUp 0.8s 0.15s ease both;
 }
 
 .slide__lead {
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  width: 100%;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
   font-weight: 400;
   line-height: 1.6;
   color: var(--text);
-  margin-bottom: 0.5rem;
   animation: fadeUp 0.8s 0.1s ease both;
 }
 
 .slide__note {
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  width: 100%;
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   color: var(--muted);
-  margin-bottom: 1.75rem;
   animation: fadeUp 0.8s 0.15s ease both;
 }
 
@@ -111,18 +128,18 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.35rem;
-  margin-bottom: 1.75rem;
+  width: 100%;
   animation: fadeUp 0.8s 0.2s ease both;
 }
 
 .flow__step {
+  width: min(280px, 100%);
   padding: 0.55rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 500;
   background: var(--surface);
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 8px;
-  min-width: 220px;
   text-align: center;
 }
 
@@ -138,7 +155,7 @@ body {
 }
 
 .example {
-  margin-bottom: 1.5rem;
+  width: 100%;
   padding: 1.25rem 1.5rem;
   background: rgba(17, 24, 39, 0.6);
   border: 1px solid rgba(148, 163, 184, 0.15);
@@ -155,10 +172,13 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.example__label + .example__label {
+  margin-top: 1rem;
+}
+
 .example__sentence {
   font-size: 1rem;
   color: var(--muted);
-  margin-bottom: 1rem;
 }
 
 .example__sentence span {
@@ -169,7 +189,9 @@ body {
 .token-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .token {
@@ -185,10 +207,12 @@ body {
 }
 
 .callout {
+  width: 100%;
   padding: 1rem 1.25rem;
-  border-left: 3px solid var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-top: 3px solid var(--accent);
   background: rgba(56, 189, 248, 0.06);
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
   animation: fadeUp 0.8s 0.3s ease both;
 }
 
@@ -208,34 +232,6 @@ body {
   margin-top: 0.35rem;
   color: var(--accent) !important;
   font-weight: 600;
-}
-
-.slide__title {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 500;
-  line-height: 1.15;
-  margin-bottom: 2rem;
-  letter-spacing: -0.02em;
-}
-
-.slide__subtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.7;
-  color: var(--muted);
-  animation: fadeUp 0.8s 0.15s ease both;
-}
-
-.slide__sentence {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  font-weight: 300;
-  line-height: 1.7;
-  color: var(--muted);
-  max-width: 640px;
-  margin: 0 auto;
-  animation: fadeUp 0.8s 0.15s ease both;
 }
 
 .slide__accent {
@@ -272,5 +268,19 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (max-height: 720px) {
+  :root {
+    --slide-padding-bottom: 3rem;
+  }
+
+  .slide__inner--wide {
+    gap: 0.85rem;
+  }
+
+  .example {
+    padding: 1rem 1.15rem;
   }
 }
