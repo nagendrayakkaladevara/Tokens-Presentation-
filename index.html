@@ -18,10 +18,47 @@
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
+
+    <section class="slide slide--content" data-slide="2">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">What is a Token?</h1>
+
+        <p class="slide__lead">
+          A token is the smallest meaningful text unit an LLM processes.
+        </p>
+        <p class="slide__note">The model does <strong>NOT</strong> read full sentences directly.</p>
+        <div class="flow">
+          <div class="flow__step">Sentence</div>
+          <div class="flow__arrow">↓</div>
+          <div class="flow__step">Broken into Tokens</div>
+          <div class="flow__arrow">↓</div>
+          <div class="flow__step flow__step--accent">Processed by AI</div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Example</p>
+          <p class="example__sentence">Sentence: <span>I love Angular</span></p>
+
+          <p class="example__label">Possible tokens:</p>
+          <div class="token-row">
+            <span class="token">I</span>
+            <span class="token">love</span>
+            <span class="token">Angular</span>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p class="callout__title">Notice:</p>
+          <p>Tokens may contain spaces</p>
+          <p class="callout__emphasis">This is VERY important.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
   </div>
 
   <footer class="controls">
-    <span class="controls__counter"><span id="current">1</span> / <span id="total">1</span></span>
+    <span class="controls__counter"><span id="current">1</span> / <span id="total">2</span></span>
   </footer>
 
   <script src="js/app.js"></script>
