@@ -493,3 +493,28 @@ body {
 .algo-table td:last-child {
   color: var(--muted);
 }
+
+.link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.link-list__item {
+  display: block;
+  padding: clamp(0.65rem, 1.2vh, 0.85rem) clamp(0.85rem, 1.5vw, 1rem);
+  font-size: clamp(0.85rem, 1.6vh, 0.95rem);
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.link-list__item:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.5);
+}

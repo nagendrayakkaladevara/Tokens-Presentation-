@@ -14,6 +14,7 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | 6 | Why Not Character-by-Character? / Why Spaces Become Tokens | Done |
 | 7 | Token IDs & Vocabulary | Done |
 | 8 | Why Token IDs Are Needed | Done |
+| 9 | Try it yourself — tokenizer tools | Done |
 
 ## Live site
 
