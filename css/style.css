@@ -64,19 +64,6 @@ body {
   animation: fadeUp 0.8s ease both;
 }
 
-.slide__label {
-  display: inline-block;
-  margin-bottom: 2rem;
-  padding: 0.35rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  border-radius: 999px;
-}
-
 .slide__title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
