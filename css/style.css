@@ -544,6 +544,50 @@ body {
   gap: 0.65rem;
 }
 
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1vh, 0.75rem);
+  width: 100%;
+  margin-top: 0.35rem;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 5.5rem;
+  padding: clamp(0.65rem, 1.2vh, 0.85rem) clamp(0.5rem, 1vw, 0.75rem);
+  text-decoration: none;
+  text-align: center;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 8px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.link-card:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px);
+}
+
+.link-card__title {
+  font-size: clamp(0.85rem, 1.6vh, 0.95rem);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.link-card__url {
+  font-size: clamp(0.68rem, 1.2vh, 0.78rem);
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1.35;
+  word-break: break-word;
+}
+
 .link-list__item {
   display: block;
   padding: clamp(0.65rem, 1.2vh, 0.85rem) clamp(0.85rem, 1.5vw, 1rem);
@@ -708,6 +752,10 @@ body {
 
 @media (max-width: 900px) {
   .slide-grid--3col {
+    grid-template-columns: 1fr;
+  }
+
+  .link-grid {
     grid-template-columns: 1fr;
   }
 }
