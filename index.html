@@ -131,25 +131,23 @@
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Important Insight</h1>
 
-        <div class="insight-block">
-          <p class="slide__lead">Tokenizer is <strong>NOT</strong> grammar-based.</p>
-          <p class="slide__note">It is pattern/statistics-based.</p>
-        </div>
+        <p class="slide__lead">Tokenizer is <strong>NOT</strong> grammar-based.</p>
+        <p class="slide__note">It is pattern/statistics-based.</p>
 
-        <div class="learn-block">
+        <div class="example">
           <p class="example__label">It learns:</p>
-          <ul class="learn-list">
-            <li>common words</li>
-            <li>common subwords</li>
-            <li>frequent patterns</li>
-            <li>code syntax</li>
-            <li>punctuation</li>
-          </ul>
+          <div class="token-row">
+            <span class="token">common words</span>
+            <span class="token">common subwords</span>
+            <span class="token">frequent patterns</span>
+            <span class="token">code syntax</span>
+            <span class="token">punctuation</span>
+          </div>
         </div>
 
-        <div class="algo-block">
-          <h2 class="algo-block__title">Common Tokenization Algorithms</h2>
-          <p class="slide__note">Modern LLMs use algorithms like:</p>
+        <div class="example">
+          <p class="example__label">Common Tokenization Algorithms</p>
+          <p class="example__sentence">Modern LLMs use algorithms like:</p>
 
           <table class="algo-table">
             <thead>
@@ -180,7 +178,7 @@
 
         <div class="example">
           <p class="example__label">Character-level tokens:</p>
-          <div class="token-row token-row--chars">
+          <div class="token-row">
             <span class="token">A</span>
             <span class="token">n</span>
             <span class="token">g</span>
@@ -191,28 +189,30 @@
           </div>
         </div>
 
-        <div class="learn-block learn-block--compact">
+        <div class="example">
           <p class="example__label">would create:</p>
-          <ul class="learn-list learn-list--single">
-            <li>huge sequences</li>
-            <li>slow processing</li>
-            <li>poor semantic learning</li>
-          </ul>
+          <div class="token-row">
+            <span class="token">huge sequences</span>
+            <span class="token">slow processing</span>
+            <span class="token">poor semantic learning</span>
+          </div>
         </div>
 
-        <p class="slide__lead slide__lead--accent">So subword tokenization is smarter.</p>
+        <div class="callout">
+          <p class="callout__emphasis">So subword tokenization is smarter.</p>
+        </div>
 
-        <div class="section-divider">
-          <h2 class="section-divider__title">Why Spaces Become Tokens</h2>
-          <p class="slide__note">This confuses many developers initially.</p>
+        <div class="example">
+          <p class="example__label">Why Spaces Become Tokens</p>
+          <p class="example__sentence">This confuses many developers initially.</p>
         </div>
 
         <div class="callout">
           <p class="callout__title">Important Fact</p>
           <p>In GPT-style tokenizers:</p>
-          <div class="token-compare">
-            <span class="token token--quote">"cat"</span>
-            <span class="token token--quote">" cat"</span>
+          <div class="token-row">
+            <span class="token">"cat"</span>
+            <span class="token">" cat"</span>
           </div>
         </div>
       </div>
