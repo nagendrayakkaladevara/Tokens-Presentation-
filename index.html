@@ -390,10 +390,265 @@
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
+
+    <section class="slide slide--content" data-slide="10">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Embeddings</h1>
+        <div class="callout">
+          <p class="callout__emphasis">Now we reach the MOST IMPORTANT concept in modern AI systems.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="11">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Problem</h1>
+        <p class="slide__lead slide__span-full">Token IDs are just meaningless integers.</p>
+
+        <div class="example example--compact slide__span-full">
+          <table class="algo-table">
+            <thead><tr><th>Token</th><th>Token ID</th></tr></thead>
+            <tbody>
+              <tr><td>Angular</td><td>8821</td></tr>
+              <tr><td>React</td><td>9231</td></tr>
+              <tr><td>Dog</td><td>44</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="slide-grid">
+          <div class="example example--compact">
+            <p class="example__label">Example</p>
+            <p class="example__code"><span>8821 and 9231</span></p>
+            <p class="example__sentence">Mathematically, these are just random integers.</p>
+          </div>
+          <div class="callout callout--compact">
+            <p class="example__sentence">The model cannot understand that:</p>
+            <p class="example__code"><span>Angular and React are related</span></p>
+            <p class="example__sentence">because:</p>
+            <p class="example__code"><span>8821 ≠ semantically close to 9231</span></p>
+          </div>
+        </div>
+
+        <p class="slide__note slide__span-full">There is no meaningful relationship between token IDs themselves.</p>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="12">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Why This Is a Problem</h1>
+        <p class="slide__note slide__span-full">Neural networks work using mathematics:</p>
+
+        <div class="token-row slide__span-full">
+          <span class="token">distances</span>
+          <span class="token">vector operations</span>
+          <span class="token">matrix multiplication</span>
+          <span class="token">similarity calculations</span>
+        </div>
+
+        <p class="slide__lead slide__span-full">But integer IDs alone cannot represent meaning.</p>
+
+        <div class="slide-grid">
+          <div class="example example--compact">
+            <p class="example__label">Example</p>
+            <p class="example__code"><span>Dog → 44</span></p>
+            <p class="example__code"><span>Cat → 51</span></p>
+          </div>
+          <div class="callout callout--compact">
+            <p class="example__sentence">The numbers <strong>44</strong> and <strong>51</strong> being numerically close is completely accidental.</p>
+            <p class="callout__emphasis">It does NOT mean Dog is semantically similar to Cat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="13">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Solution: Embeddings</h1>
+        <p class="slide__lead slide__span-full">We convert token IDs into dense numerical vectors called <strong>Embeddings</strong>.</p>
+
+        <div class="slide-grid">
+          <div class="example example--compact">
+            <p class="example__label">What is an Embedding?</p>
+            <p class="example__sentence">A high-dimensional vector representing semantic meaning.</p>
+            <p class="example__code"><span>Angular</span></p>
+            <p class="example__sentence">↓</p>
+            <p class="example__code"><span>[0.12, -0.91, 0.44, 1.82, ...]</span></p>
+          </div>
+          <div class="example example--compact">
+            <p class="example__label">Instead of a single integer:</p>
+            <p class="example__code"><span>8821</span></p>
+            <p class="example__sentence">the token becomes a vector of many floating-point numbers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="14">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Embedding Conversion Flow</h1>
+
+        <div class="flow flow--horizontal">
+          <div class="flow__step">Token</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Token ID</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Embedding Layer</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step flow__step--accent">Dense Vector</div>
+        </div>
+
+        <div class="example example--compact">
+          <table class="algo-table">
+            <thead><tr><th>Token</th><th>Token ID</th><th>Embedding</th></tr></thead>
+            <tbody>
+              <tr><td>Angular</td><td>8821</td><td>[0.21, -0.88, 1.02, ...]</td></tr>
+              <tr><td>React</td><td>9231</td><td>[0.19, -0.91, 0.97, ...]</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout callout--compact">
+          <p class="callout__title">Notice:</p>
+          <p class="callout__emphasis">The vectors become similar.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="15">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Why Similar Vectors Matter</h1>
+        <p class="slide__lead slide__span-full">During training, the model learns:</p>
+        <p class="example__code example__code--solo slide__span-full"><span>Angular and React appear in similar contexts</span></p>
+
+        <div class="example example--compact slide__span-full">
+          <p class="example__label">Example training data:</p>
+          <p class="example__code"><span>Angular is a frontend framework</span></p>
+          <p class="example__code"><span>React is a frontend library</span></p>
+        </div>
+
+        <div class="callout callout--compact slide__span-full">
+          <p class="callout__emphasis">Because they appear in related contexts repeatedly, their embeddings gradually move closer together in vector space.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="16">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Embeddings Capture Semantic Meaning</h1>
+
+        <div class="token-row slide__span-full">
+          <span class="token">semantic relationships</span>
+          <span class="token">contextual similarity</span>
+          <span class="token">syntax patterns</span>
+          <span class="token">language structure</span>
+          <span class="token">conceptual relationships</span>
+        </div>
+
+        <div class="example example--compact slide__span-full">
+          <p class="example__label">Example of Semantic Similarity</p>
+          <table class="algo-table">
+            <thead><tr><th>Word</th><th>Similar Words</th></tr></thead>
+            <tbody>
+              <tr><td>Angular</td><td>React, Vue</td></tr>
+              <tr><td>Dog</td><td>Cat, Puppy</td></tr>
+              <tr><td>Car</td><td>Vehicle, Truck</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="slide__note slide__span-full">Their embedding vectors become mathematically close.</p>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="17">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Embedding Dimensions</h1>
+        <p class="slide__lead">Real embeddings are large vectors.</p>
+
+        <div class="example example--compact">
+          <table class="algo-table">
+            <thead><tr><th>Model</th><th>Embedding Size</th></tr></thead>
+            <tbody>
+              <tr><td>Small models</td><td>256</td></tr>
+              <tr><td>Medium models</td><td>768</td></tr>
+              <tr><td>Large LLMs</td><td>1536–4096+</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="example__code example__code--solo"><span>[0.12, -0.44, 1.87, 0.91, ...]</span></p>
+        <p class="slide__note">may contain thousands of dimensions.</p>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="18">
+      <div class="slide__inner slide__inner--wide slide__inner--grid">
+        <h1 class="slide__title slide__title--sm slide__span-full">Important Insight</h1>
+
+        <div class="slide-grid">
+          <div class="callout callout--compact">
+            <p class="callout__emphasis">Embeddings are NOT manually programmed.</p>
+            <p class="example__sentence">The model learns them automatically during training.</p>
+            <p class="example__sentence">As training progresses:</p>
+            <p class="example__code"><span>similar concepts ↓ move closer together</span></p>
+            <p class="example__sentence">inside vector space.</p>
+          </div>
+          <div class="example example--compact">
+            <p class="example__label">Famous Embedding Relationship</p>
+            <p class="example__sentence">A classic example:</p>
+            <p class="example__code"><span>King - Man + Woman ≈ Queen</span></p>
+            <p class="example__sentence">Embeddings learn relational patterns mathematically.</p>
+          </div>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="19">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Full Pipeline</h1>
+
+        <div class="flow flow--pipeline">
+          <div class="flow__step">Raw Text</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Tokenization</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Tokens</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Token IDs</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step">Embedding Layer</div>
+          <div class="flow__arrow">→</div>
+          <div class="flow__step flow__step--accent">Semantic Vectors</div>
+        </div>
+
+        <div class="example example--compact">
+          <p class="example__label">Key Understanding</p>
+          <p class="example__sentence"><strong>Token IDs</strong> are just indexes.</p>
+          <p class="example__sentence"><strong>Embeddings</strong> are where semantic meaning begins.</p>
+        </div>
+
+        <div class="callout callout--compact">
+          <p class="example__sentence">Without embeddings:</p>
+          <p class="example__code"><span>AI cannot understand relationships between words</span></p>
+          <p class="callout__emphasis">Embeddings transform language into mathematical representations that neural networks can process efficiently.</p>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
   </div>
 
   <footer class="controls">
-    <span class="controls__counter"><span id="current">1</span> / <span id="total">9</span></span>
+    <span class="controls__counter"><span id="current">1</span> / <span id="total">19</span></span>
   </footer>
 
   <script src="js/app.js"></script>

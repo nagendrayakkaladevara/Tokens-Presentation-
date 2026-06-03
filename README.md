@@ -15,6 +15,7 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | 7 | Token IDs & Vocabulary | Done |
 | 8 | Why Token IDs Are Needed | Done |
 | 9 | Try it yourself — tokenizer tools | Done |
+| 10–19 | Embeddings — full concept walkthrough | Done |
 
 ## Live site
 
