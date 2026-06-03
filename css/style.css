@@ -86,6 +86,15 @@ body {
   letter-spacing: -0.02em;
 }
 
+.slide__subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.7;
+  color: var(--muted);
+  animation: fadeUp 0.8s 0.15s ease both;
+}
+
 .slide__sentence {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
   font-weight: 300;
