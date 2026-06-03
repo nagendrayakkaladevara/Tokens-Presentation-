@@ -162,6 +162,32 @@ body {
   min-width: 0;
 }
 
+.flow--pipeline {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem 0.4rem;
+}
+
+.flow--pipeline .flow__step {
+  width: auto;
+  min-width: 0;
+  padding: clamp(0.3rem, 0.7vh, 0.45rem) clamp(0.55rem, 1vw, 0.75rem);
+  font-size: clamp(0.72rem, 1.3vh, 0.82rem);
+}
+
+.callout .example__code {
+  margin-top: 0.35rem;
+}
+
+.callout .example__sentence {
+  margin-top: 0.25rem;
+}
+
+.example__sentence strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .flow__step--accent {
   border-color: rgba(56, 189, 248, 0.45);
   color: var(--accent);
@@ -497,8 +523,18 @@ body {
   font-weight: 500;
 }
 
-.algo-table td:last-child {
+.algo-table td:nth-child(2) {
   color: var(--muted);
+}
+
+.algo-table td:last-child:not(:nth-child(2)) {
+  color: var(--muted);
+}
+
+.algo-table td:nth-child(3) {
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: clamp(0.72rem, 1.3vh, 0.82rem);
+  color: var(--text);
 }
 
 .link-list {
