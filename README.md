@@ -7,7 +7,8 @@ A web-based presentation built with HTML, CSS, and JavaScript — slide-style sc
 | Screen | Title | Status |
 |--------|-------|--------|
 | 1 | What is a Token? (Before 5 Years) | Done |
-| 2 | What is a Token? — LLM explanation & example | Done |
+| 2 | ChatGPT / Copilot / Claude — type your question | Done |
+| 3 | What is a Token? — LLM explanation & example | Done |
 | 3 | Tokens Are NOT Always Words | Done |
 | 4 | Code Tokenization Example | Done |
 | 5 | Important Insight — Tokenization algorithms | Done |
