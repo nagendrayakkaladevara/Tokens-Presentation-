@@ -186,6 +186,20 @@ body {
   font-weight: 500;
 }
 
+.example__code {
+  margin-bottom: 1rem;
+}
+
+.example__code span {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  font-family: ui-monospace, "Cascadia Code", monospace;
+  font-size: 0.95rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 8px;
+}
+
 .token-row {
   display: flex;
   flex-wrap: wrap;
