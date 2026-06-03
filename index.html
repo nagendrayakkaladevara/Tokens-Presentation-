@@ -216,6 +216,50 @@
           </div>
           <p class="callout__emphasis">are <strong>DIFFERENT</strong> tokens.</p>
         </div>
+
+        <div class="example">
+          <p class="example__label">Why This Design Exists</p>
+          <p class="example__sentence">Because spaces carry information.</p>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Example</p>
+          <p class="example__sentence"><span>New York</span></p>
+
+          <p class="example__label">Tokenizer may learn:</p>
+          <div class="token-row">
+            <span class="token">New</span>
+            <span class="token">York</span>
+          </div>
+
+          <p class="example__label">instead of:</p>
+          <div class="token-row">
+            <span class="token">New</span>
+            <span class="token">Y</span>
+            <span class="token">o</span>
+            <span class="token">r</span>
+            <span class="token">k</span>
+          </div>
+        </div>
+
+        <div class="example">
+          <p class="example__label">Another Example</p>
+          <p class="example__sentence">These are different statistically:</p>
+          <div class="token-row">
+            <span class="token">apple</span>
+            <span class="token"> Apple</span>
+          </div>
+          <p class="example__sentence">One may appear:</p>
+          <div class="token-row">
+            <span class="token">mid-sentence</span>
+            <span class="token">sentence start</span>
+            <span class="token">title case</span>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p class="callout__emphasis">Spacing + casing patterns matter in language.</p>
+        </div>
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
