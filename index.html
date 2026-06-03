@@ -173,10 +173,55 @@
       </div>
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
+
+    <section class="slide slide--content" data-slide="6">
+      <div class="slide__inner slide__inner--wide">
+        <h1 class="slide__title slide__title--sm">Why Not Character-by-Character?</h1>
+
+        <div class="example">
+          <p class="example__label">Character-level tokens:</p>
+          <div class="token-row token-row--chars">
+            <span class="token">A</span>
+            <span class="token">n</span>
+            <span class="token">g</span>
+            <span class="token">u</span>
+            <span class="token">l</span>
+            <span class="token">a</span>
+            <span class="token">r</span>
+          </div>
+        </div>
+
+        <div class="learn-block learn-block--compact">
+          <p class="example__label">would create:</p>
+          <ul class="learn-list learn-list--single">
+            <li>huge sequences</li>
+            <li>slow processing</li>
+            <li>poor semantic learning</li>
+          </ul>
+        </div>
+
+        <p class="slide__lead slide__lead--accent">So subword tokenization is smarter.</p>
+
+        <div class="section-divider">
+          <h2 class="section-divider__title">Why Spaces Become Tokens</h2>
+          <p class="slide__note">This confuses many developers initially.</p>
+        </div>
+
+        <div class="callout">
+          <p class="callout__title">Important Fact</p>
+          <p>In GPT-style tokenizers:</p>
+          <div class="token-compare">
+            <span class="token token--quote">"cat"</span>
+            <span class="token token--quote">" cat"</span>
+          </div>
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
   </div>
 
   <footer class="controls">
-    <span class="controls__counter"><span id="current">1</span> / <span id="total">5</span></span>
+    <span class="controls__counter"><span id="current">1</span> / <span id="total">6</span></span>
   </footer>
 
   <script src="js/app.js"></script>
