@@ -19,7 +19,27 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="2">
+    <section class="slide slide--content slide--split" data-slide="2">
+      <div class="slide__inner slide__inner--split">
+        <div class="slide-split__text">
+          <p class="slide__lead slide__lead--split">
+            We type our question in <strong>ChatGPT</strong>, <strong>Copilot</strong>, or <strong>Claude</strong> — just like this.
+          </p>
+        </div>
+        <div class="slide-split__media">
+          <img
+            class="slide-split__image"
+            src="images/chatgpt-mobile.png"
+            alt="ChatGPT mobile app with Ask anything input field"
+            width="280"
+            height="560"
+          />
+        </div>
+      </div>
+      <div class="slide__accent" aria-hidden="true"></div>
+    </section>
+
+    <section class="slide slide--content" data-slide="3">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">What is a Token?</h1>
 
@@ -56,7 +76,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="3">
+    <section class="slide slide--content" data-slide="4">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Tokens Are NOT Always Words</h1>
 
@@ -79,7 +99,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="4">
+    <section class="slide slide--content" data-slide="5">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Code Tokenization Example</h1>
 
@@ -127,7 +147,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="5">
+    <section class="slide slide--content" data-slide="6">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Important Insight</h1>
 
@@ -172,7 +192,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content slide--dense" data-slide="6">
+    <section class="slide slide--content slide--dense" data-slide="7">
       <div class="slide__inner slide__inner--grid slide__inner--slide6">
         <h1 class="slide__title slide__title--sm slide__span-full">Why Not Character-by-Character?</h1>
 
@@ -276,7 +296,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="7">
+    <section class="slide slide--content" data-slide="8">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Token IDs</h1>
 
@@ -326,7 +346,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="8">
+    <section class="slide slide--content" data-slide="9">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Why Token IDs Are Needed</h1>
 
@@ -362,7 +382,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="9">
+    <section class="slide slide--content" data-slide="10">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">You can give it a try</h1>
 
@@ -387,7 +407,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="10">
+    <section class="slide slide--content" data-slide="11">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Embeddings</h1>
         <div class="callout">
@@ -397,7 +417,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="11">
+    <section class="slide slide--content" data-slide="12">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Problem</h1>
         <p class="slide__lead slide__span-full">Token IDs are just meaningless integers.</p>
@@ -432,7 +452,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="12">
+    <section class="slide slide--content" data-slide="13">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Why This Is a Problem</h1>
         <p class="slide__note slide__span-full">Neural networks work using mathematics:</p>
@@ -461,7 +481,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="13">
+    <section class="slide slide--content" data-slide="14">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Solution: Embeddings</h1>
         <p class="slide__lead slide__span-full">We convert token IDs into dense numerical vectors called <strong>Embeddings</strong>.</p>
@@ -484,7 +504,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="14">
+    <section class="slide slide--content" data-slide="15">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Embedding Conversion Flow</h1>
 
@@ -516,7 +536,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="15">
+    <section class="slide slide--content" data-slide="16">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Why Similar Vectors Matter</h1>
         <p class="slide__lead slide__span-full">During training, the model learns:</p>
@@ -535,7 +555,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="16">
+    <section class="slide slide--content" data-slide="17">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Embeddings Capture Semantic Meaning</h1>
 
@@ -564,7 +584,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="17">
+    <section class="slide slide--content" data-slide="18">
       <div class="slide__inner slide__inner--wide">
         <h1 class="slide__title slide__title--sm">Embedding Dimensions</h1>
         <p class="slide__lead">Real embeddings are large vectors.</p>
@@ -586,7 +606,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="18">
+    <section class="slide slide--content" data-slide="19">
       <div class="slide__inner slide__inner--wide slide__inner--grid">
         <h1 class="slide__title slide__title--sm slide__span-full">Important Insight</h1>
 
@@ -609,7 +629,7 @@
       <div class="slide__accent" aria-hidden="true"></div>
     </section>
 
-    <section class="slide slide--content" data-slide="19">
+    <section class="slide slide--content" data-slide="20">
       <div class="slide__inner slide__inner--wide">
         <div class="flow flow--pipeline">
           <div class="flow__step">Raw Text</div>
